@@ -1,0 +1,36 @@
+""" The strategy is to divide the design in to multiple parts
+1- First we will print the spaces starting from left e.g.
+0
+-
+--
+---
+---
+--
+-
+0
+2- Second is to print the asterisk after printing the space from first step.
+The output will look something like this after completing step 1 and step 2.
+As you guessed it before, we have to take minimum of i and j
+*
+-**
+--*
+---*
+---*
+--*
+-*
+*
+3- Third is to print spaces again which is equivalent to 2 * abs(j-i) - 2
+4- Fourth is to repeat step 2 again to print asterisk
+"""
+
+
+def print_triangle(n):
+    for i, j in zip(range(1, n+1), range(n, 0, -1)):
+        spaces = (n - abs(j-i))//2
+        print(" " * spaces, end="")
+        asterisks = min(i, j)
+        print("*" * asterisks, end="")
+        spaces = 2 * abs(j-i) - 2
+        print(" " * spaces, end="")
+        print("*" * asterisks)
+print_triangle(8)
