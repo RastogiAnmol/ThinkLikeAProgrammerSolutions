@@ -21,6 +21,14 @@ As you guessed it before, we have to take minimum of i and j
 *
 3- Third is to print spaces again which is equivalent to 2 * abs(j-i) - 2
 4- Fourth is to repeat step 2 again to print asterisk
+*            *
+ **        **
+  ***    ***
+   ********
+   ********
+  ***    ***
+ **        **
+*            *
 """
 
 
