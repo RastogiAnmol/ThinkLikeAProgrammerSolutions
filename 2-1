@@ -1,0 +1,15 @@
+'''
+Output
+********
+ ******
+  ****
+   **
+'''
+def print_triangle(n):
+    for i in range(n, 0, -1):
+        spaces = n -i
+        asterisks = 2 * i
+        print(" " * spaces, end="")
+        print("*" * asterisks)
+
+print_triangle(4)
